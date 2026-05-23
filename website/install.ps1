@@ -19,7 +19,7 @@ $ErrorActionPreference = 'Stop'
 [Net.ServicePointManager]::SecurityProtocol =
     [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
 
-$GithubRepo = 'brettchalupa/usagi'
+$GithubRepo = 'easierbycode/usagi'
 $UserAgent = 'usagi-installer'
 
 if (-not [Environment]::Is64BitOperatingSystem) {
