@@ -10,7 +10,7 @@
 
 set -eu
 
-GITHUB_REPO="brettchalupa/usagi"
+GITHUB_REPO="easierbycode/usagi"
 
 err() {
   printf 'error: %s\n' "$*" >&2
@@ -51,7 +51,8 @@ case "$os" in
   Linux)
     case "$arch" in
       x86_64|amd64) target="linux-x86_64" ;;
-      *) err "unsupported Linux architecture: $arch (only x86_64 is published)" ;;
+      arm64|aarch64) target="linux-aarch64" ;;
+      *) err "unsupported Linux architecture: $arch (only x86_64 and aarch64 are published)" ;;
     esac
     ;;
   *)

@@ -255,6 +255,7 @@ prereleases following semver convention.
 | File                               | Target                                               |
 | ---------------------------------- | ---------------------------------------------------- |
 | `usagi-<ver>-linux-x86_64.tar.gz`  | Linux x86_64, glibc 2.35+                            |
+| `usagi-<ver>-linux-aarch64.tar.gz` | Linux aarch64/arm64, glibc 2.35+                     |
 | `usagi-<ver>-macos-aarch64.tar.gz` | macOS, Apple Silicon                                 |
 | `usagi-<ver>-windows-x86_64.zip`   | Windows 10+                                          |
 | `usagi-<ver>-wasm.tar.gz`          | Web runtime (`usagi.js` + `usagi.wasm` + shell.html) |
@@ -294,6 +295,8 @@ published version nor the upcoming version (yet).
 
 - The Linux runner is `ubuntu-22.04` (glibc 2.35) for portability. Binaries
   should run on Debian 12+, RHEL 9+, Fedora, Arch, openSUSE Leap 15.4+.
+- The Linux aarch64 build runs natively on the `ubuntu-22.04-arm` runner
+  (glibc 2.35), so it carries the same distro floor as the x86_64 build.
 - `macos-latest` is Apple Silicon. No Intel mac binary is produced.
 
 ## Web Build (wasm32-unknown-emscripten) Notes
